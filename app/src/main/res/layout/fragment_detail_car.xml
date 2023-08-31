@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".core.presentation.detail.DetailCarFragment">
+
+        <LinearLayout
+            android:id="@+id/btn_back_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:paddingEnd="24dp"
+                android:text="@string/detail_car"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_car"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:scaleType="centerCrop"
+            tools:src="@color/dark_gray" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            tools:text="Car Title" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            tools:text="Lorem ipsum dolor sit amet this is the description of the car that should be described within one or more paragraphs." />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:icon="@drawable/ic_favorite_outline"
+        app:iconTint="@color/purple_200" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
