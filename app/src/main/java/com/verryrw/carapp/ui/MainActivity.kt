@@ -1,4 +1,4 @@
-package com.verryrw.carapp.core.presentation
+package com.verryrw.carapp.ui
 
 import android.os.Bundle
 import android.view.View

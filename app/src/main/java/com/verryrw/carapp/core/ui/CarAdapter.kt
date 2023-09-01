@@ -1,4 +1,4 @@
-package com.verryrw.carapp.core.presentation.adapter
+package com.verryrw.carapp.core.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.verryrw.carapp.core.domain.models.Car
-import com.verryrw.carapp.core.presentation.favorite.FavoriteCarFragmentDirections
-import com.verryrw.carapp.core.presentation.home.HomeFragmentDirections
 import com.verryrw.carapp.databinding.ItemCarBinding
+import com.verryrw.carapp.ui.favorite.FavoriteCarFragmentDirections
+import com.verryrw.carapp.ui.home.HomeFragmentDirections
 
 class CarAdapter(private val data: List<Car>, private val source: String = "home") :
     RecyclerView.Adapter<CarAdapter.ItemViewHolder>() {
@@ -49,8 +49,7 @@ class CarAdapter(private val data: List<Car>, private val source: String = "home
 
         private fun setUpActionListener(car: Car) {
             itemView.setOnClickListener {
-                var action: NavDirections =
-                    HomeFragmentDirections.actionHomeFragmentToDetailFishFragment(car)
+                var action: NavDirections = HomeFragmentDirections.actionHomeFragmentToDetailFishFragment(car)
 
                 if (source == "favorite") {
                     action =

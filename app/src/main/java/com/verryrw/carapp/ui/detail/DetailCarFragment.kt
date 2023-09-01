@@ -1,4 +1,4 @@
-package com.verryrw.carapp.core.presentation.detail
+package com.verryrw.carapp.ui.detail
 
 import android.annotation.SuppressLint
 import android.os.Bundle

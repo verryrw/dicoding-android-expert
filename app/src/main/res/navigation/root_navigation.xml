@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.verryrw.carapp.core.presentation.home.HomeFragment"
+        android:name="com.verryrw.carapp.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteFishFragment"
-        android:name="com.verryrw.carapp.core.presentation.favorite.FavoriteCarFragment"
+        android:name="com.verryrw.carapp.ui.favorite.FavoriteCarFragment"
         android:label="fragment_favorite_fish"
         tools:layout="@layout/fragment_favorite_car" >
         <action
@@ -25,12 +25,12 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.verryrw.carapp.core.presentation.profile.ProfileFragment"
+        android:name="com.verryrw.carapp.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/detailCarFragment"
-        android:name="com.verryrw.carapp.core.presentation.detail.DetailCarFragment"
+        android:name="com.verryrw.carapp.ui.detail.DetailCarFragment"
         android:label="fragment_detail_fish"
         tools:layout="@layout/fragment_detail_car" >
         <argument

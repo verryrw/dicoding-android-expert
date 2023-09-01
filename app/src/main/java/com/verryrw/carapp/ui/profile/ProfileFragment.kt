@@ -1,4 +1,4 @@
-package com.verryrw.carapp.core.presentation.profile
+package com.verryrw.carapp.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater

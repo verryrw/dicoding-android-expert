@@ -1,4 +1,4 @@
-package com.verryrw.carapp.core.domain.use_case
+package com.verryrw.carapp.core.domain.usecase
 
 import com.verryrw.carapp.core.common.Resource
 import com.verryrw.carapp.core.domain.models.Car

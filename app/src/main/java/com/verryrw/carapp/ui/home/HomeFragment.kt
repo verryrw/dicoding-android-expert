@@ -1,4 +1,4 @@
-package com.verryrw.carapp.core.presentation.home
+package com.verryrw.carapp.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.verryrw.carapp.core.common.Resource
-import com.verryrw.carapp.core.presentation.adapter.CarAdapter
+import com.verryrw.carapp.core.ui.CarAdapter
 import com.verryrw.carapp.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
