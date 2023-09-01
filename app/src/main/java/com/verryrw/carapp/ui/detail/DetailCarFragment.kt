@@ -11,8 +11,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.verryrw.carapp.R
-import com.verryrw.carapp.core.domain.models.Car
 import com.verryrw.carapp.databinding.FragmentDetailCarBinding
+import com.verryrw.core.domain.models.Car
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

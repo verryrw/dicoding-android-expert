@@ -2,7 +2,7 @@ package com.verryrw.carapp.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.verryrw.carapp.core.domain.usecase.CarUseCase
+import com.verryrw.core.domain.usecase.CarUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

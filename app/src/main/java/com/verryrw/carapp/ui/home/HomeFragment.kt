@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.verryrw.carapp.core.common.Resource
-import com.verryrw.carapp.core.ui.CarAdapter
 import com.verryrw.carapp.databinding.FragmentHomeBinding
+import com.verryrw.core.common.Resource
+import com.verryrw.carapp.ui.CarAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

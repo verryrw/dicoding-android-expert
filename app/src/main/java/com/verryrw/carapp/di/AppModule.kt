@@ -1,7 +1,7 @@
 package com.verryrw.carapp.di
 
-import com.verryrw.carapp.core.domain.usecase.CarInteractor
-import com.verryrw.carapp.core.domain.usecase.CarUseCase
+import com.verryrw.core.domain.usecase.CarInteractor
+import com.verryrw.core.domain.usecase.CarUseCase
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

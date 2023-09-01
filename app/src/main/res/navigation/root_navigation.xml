@@ -9,7 +9,7 @@
         android:id="@+id/homeFragment"
         android:name="com.verryrw.carapp.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_detailFishFragment"
             app:destination="@id/detailCarFragment" />
@@ -18,7 +18,7 @@
         android:id="@+id/favoriteFishFragment"
         android:name="com.verryrw.carapp.ui.favorite.FavoriteCarFragment"
         android:label="fragment_favorite_fish"
-        tools:layout="@layout/fragment_favorite_car" >
+        tools:layout="@layout/fragment_favorite_car">
         <action
             android:id="@+id/action_favoriteFishFragment_to_detailCarFragment"
             app:destination="@id/detailCarFragment" />
@@ -32,9 +32,9 @@
         android:id="@+id/detailCarFragment"
         android:name="com.verryrw.carapp.ui.detail.DetailCarFragment"
         android:label="fragment_detail_fish"
-        tools:layout="@layout/fragment_detail_car" >
+        tools:layout="@layout/fragment_detail_car">
         <argument
             android:name="car"
-            app:argType="com.verryrw.carapp.core.domain.models.Car" />
+            app:argType="com.verryrw.core.domain.models.Car" />
     </fragment>
 </navigation>
