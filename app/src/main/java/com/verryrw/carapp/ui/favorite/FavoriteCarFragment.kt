@@ -1,5 +1,6 @@
 package com.verryrw.carapp.ui.favorite
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.verryrw.carapp.databinding.FragmentFavoriteCarBinding
 import com.verryrw.carapp.ui.CarAdapter
+import com.verryrw.carapp.ui.detail.DetailCarActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -51,7 +53,13 @@ class FavoriteCarFragment : Fragment() {
                         tvEmpty.visibility = View.VISIBLE
                     } else {
                         rvCars.visibility = View.VISIBLE
-                        rvCars.adapter = CarAdapter(it, "favorite")
+                        val adapter = CarAdapter(it)
+                        adapter.onItemClick = { selectedData ->
+                            val intent = Intent(activity, DetailCarActivity::class.java)
+                            intent.putExtra(DetailCarActivity.EXTRA_DATA, selectedData)
+                            startActivity(intent)
+                        }
+                        rvCars.adapter = adapter
                     }
                 }
             }

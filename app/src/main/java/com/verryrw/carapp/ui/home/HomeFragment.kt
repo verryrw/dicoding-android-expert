@@ -1,5 +1,6 @@
 package com.verryrw.carapp.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.verryrw.carapp.databinding.FragmentHomeBinding
-import com.verryrw.core.common.Resource
 import com.verryrw.carapp.ui.CarAdapter
+import com.verryrw.carapp.ui.detail.DetailCarActivity
+import com.verryrw.core.common.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -46,7 +48,14 @@ class HomeFragment : Fragment() {
                             rvShimmer.stopShimmer()
                             rvShimmer.visibility = View.GONE
                             rvCars.visibility = View.VISIBLE
-                            rvCars.adapter = CarAdapter(cars.data!!)
+
+                            val adapter = CarAdapter(cars.data!!)
+                            adapter.onItemClick = { selectedData ->
+                                val intent = Intent(activity, DetailCarActivity::class.java)
+                                intent.putExtra(DetailCarActivity.EXTRA_DATA, selectedData)
+                                startActivity(intent)
+                            }
+                            rvCars.adapter = adapter
                         }
                     }
 

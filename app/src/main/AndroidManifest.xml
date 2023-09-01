@@ -16,14 +16,16 @@
         android:theme="@style/Theme.VCarApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.detail.DetailCarActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
