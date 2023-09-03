@@ -1,10 +1,10 @@
 package com.verryrw.carapp.ui
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
 import com.verryrw.carapp.R
 import com.verryrw.carapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setUpBottomNavigationView()
-
     }
 
     private fun setUpBottomNavigationView() {
@@ -28,24 +27,9 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         val bottomNavigationView = binding.navView
 
-        bottomNavigationView.setupWithNavController(navController)
-
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            val bottomNavMenus = listOf(
-                R.id.homeFragment,
-                R.id.favoriteFishFragment,
-                R.id.profileFragment
-            )
-
-            if (bottomNavMenus.contains(destination.id)) {
-                bottomNavigationView.visibility = View.VISIBLE
-            } else {
-                bottomNavigationView.visibility = View.GONE
-            }
-        }
-
         bottomNavigationView.setOnItemSelectedListener { item ->
             navController.popBackStack()
+
 
             val destinationId = item.itemId
             val currentDestinationId = navController.currentDestination?.id
@@ -55,5 +39,9 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+    }
+
+    private fun moveToChatActivity() {
+        startActivity(Intent(this, Class.forName("com.verryrw.carapp.favorite.HaloActivity")))
     }
 }

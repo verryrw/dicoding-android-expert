@@ -7,8 +7,8 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.verryrw.carapp.R
+import com.verryrw.carapp.core.domain.models.Car
 import com.verryrw.carapp.databinding.ActivityDetailCarBinding
-import com.verryrw.core.domain.models.Car
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
