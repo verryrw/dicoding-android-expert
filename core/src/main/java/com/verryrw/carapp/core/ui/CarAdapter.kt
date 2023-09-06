@@ -8,7 +8,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.verryrw.carapp.core.databinding.ItemCarBinding
 import com.verryrw.carapp.core.domain.models.Car
 
-class CarAdapter(private val data: List<Car>, private val source: String = "home") :
+class CarAdapter(private val data: List<Car>) :
     RecyclerView.Adapter<CarAdapter.ItemViewHolder>() {
 
     var onItemClick: ((Car) -> Unit)? = null

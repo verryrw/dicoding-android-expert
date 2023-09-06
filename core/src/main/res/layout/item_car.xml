@@ -17,6 +17,7 @@
         <ImageView
             android:id="@+id/img_car"
             android:layout_width="match_parent"
+            android:contentDescription="@string/image_car"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             tools:src="@tools:sample/backgrounds/scenic" />

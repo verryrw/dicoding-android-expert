@@ -1,15 +1,9 @@
 <resources>
     <string name="app_name">V-Car App</string>
-    <string name="home">Home</string>
     <string name="favorite">Favorite</string>
-    <string name="profile">Profile</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tidak_ada_data">Tidak ada data.</string>
-    <string name="detail_car">Detail Car</string>
-    <string name="all_cars">All Cars</string>
     <string name="verry_r_wibawa">Verry R. Wibawa</string>
     <string name="verryrwibawa_gmail_com">verryrwibawa@gmail.com</string>
-    <string name="favorite_cars">Favorite Cars</string>
     <string name="title_favorite">Favorite</string>
+    <string name="image_car">Image Car</string>
 </resources>
