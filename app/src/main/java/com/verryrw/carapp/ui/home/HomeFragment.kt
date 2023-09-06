@@ -3,11 +3,16 @@ package com.verryrw.carapp.ui.home
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.verryrw.carapp.R
 import com.verryrw.carapp.core.common.Resource
 import com.verryrw.carapp.core.ui.CarAdapter
 import com.verryrw.carapp.databinding.FragmentHomeBinding
@@ -39,6 +44,7 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
     }
 
+
     private fun setUpLiveDataObserver() {
         viewModel.cars.observe(viewLifecycleOwner) { cars ->
             if (cars != null) {
@@ -59,7 +65,7 @@ class HomeFragment : Fragment() {
                         }
                     }
 
-                    is com.verryrw.carapp.core.common.Resource.Error -> {
+                    is Resource.Error -> {
                         binding.apply {
                             rvShimmer.stopShimmer()
                             rvShimmer.visibility = View.GONE
@@ -67,7 +73,7 @@ class HomeFragment : Fragment() {
                         }
                     }
 
-                    is com.verryrw.carapp.core.common.Resource.Loading -> {
+                    is Resource.Loading -> {
                         binding.apply {
                             rvShimmer.startShimmer()
                             rvShimmer.visibility = View.VISIBLE
@@ -78,4 +84,5 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
 }

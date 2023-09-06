@@ -11,31 +11,6 @@
         android:orientation="vertical"
         tools:context=".ui.detail.DetailCarFragment">
 
-        <LinearLayout
-            android:id="@+id/btn_back_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <ImageView
-                android:id="@+id/btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_back" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter_bold"
-                android:paddingEnd="24dp"
-                android:text="@string/detail_car"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
-
-        </LinearLayout>
-
         <ImageView
             android:id="@+id/img_car"
             android:layout_width="match_parent"

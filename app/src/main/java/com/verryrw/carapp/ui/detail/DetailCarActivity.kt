@@ -2,6 +2,7 @@ package com.verryrw.carapp.ui.detail
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -27,11 +28,12 @@ class DetailCarActivity : AppCompatActivity(), View.OnClickListener {
 
         setUpActionListener()
         setUpData()
+        supportActionBar?.title = "Detail Car"
+         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun setUpActionListener() {
         binding.apply {
-            btnBack.setOnClickListener(this@DetailCarActivity)
             fabFavorite.setOnClickListener(this@DetailCarActivity)
         }
     }
@@ -68,9 +70,19 @@ class DetailCarActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.btn_back -> finish()
             R.id.fab_favorite -> setStatusFavorite()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish() // Finish the current activity
+                return true
+            }
+            // Add other menu item handling here if needed
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     companion object {

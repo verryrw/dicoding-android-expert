@@ -17,7 +17,7 @@
 
     <application>
         <activity
-            android:name=".HaloActivity"
+            android:name=".FavoriteActivity"
             android:exported="false" />
     </application>
 

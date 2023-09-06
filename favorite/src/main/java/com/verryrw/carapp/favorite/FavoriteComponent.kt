@@ -7,7 +7,7 @@ import dagger.Component
 
 @Component(dependencies = [FavoriteModuleDependencies::class])
 interface FavoriteComponent {
-    fun inject(fragment: FavoriteCarFragment)
+    fun inject(activity: FavoriteActivity)
 
     @Component.Builder
     interface Builder {
