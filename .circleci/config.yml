@@ -14,6 +14,12 @@ jobs:
           name: Chmod permissions
           command: sudo chmod +x ./gradlew
       - run:
+          name: List Java Versions
+          command: java -version          
+      - run:
+          name: Clear Gradle Cache
+          command: rm -rf ~/.gradle/caches
+      - run:
           name: Set Java 17
           command: |
             export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
