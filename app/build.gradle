@@ -10,12 +10,12 @@ apply from: '../shared_dependencies.gradle'
 
 android {
     namespace 'com.verryrw.carapp'
-    compileSdk 34
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.verryrw.carapp"
         minSdk 24
-        targetSdk 34
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
